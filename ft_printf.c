@@ -6,32 +6,50 @@
 /*   By: lsalkic <lsalkic@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 12:17:21 by lsalkic           #+#    #+#             */
-/*   Updated: 2025/10/25 14:47:08 by lsalkic          ###   ########.fr       */
+/*   Updated: 2025/10/27 17:22:30 by lsalkic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "./42Libft/libft.h"
+
+char	ft_c(const char *format, int i, va_list args)
+{
+	char	c;
+
+	if (format[++i] == 'c')
+		c = va_arg(args, int);
+	*ft_itoa(c);
+	return (c);
+}
 
 int	ft_printf(const char *format, ...)
 {
 	int		i;
 	char	new;
+	va_list	args;
 
+	va_start(args, format);
 	i = 0;
-	while (format[i] != '%' && format[i])
-	// soll weren waherend string nicht fertig ist schreib wenn
-	//% kommt und naechster letter dies und das ist mach das und dann weiter da noch nicht fertig
+	while (format[i])
 	{
-		write(1, &format[i], 1);
+		if (format[i] == '%')
+		{
+			i++;
+			if (format[i] == 'c')
+				ft_c(format, i, args);
+		}
+		else
+			write(1, &format[i], 1);
 		i++;
 	}
-	if (format[i] == '%')
-		return (0);
+	return (i);
 }
+
 int	main(void)
 {
+	printf("Hallo Welt!\n");
 	ft_printf("Hallo Welt!\n");
-	ft_printf("Dies ist ein Test ohne Prozentzeichen.\n");
-	ft_printf("Hier %% sollte gestoppt werden (noch nicht implementiert).\n");
+	printf("hallo ich bin lukas %c\n", 'a');
+	ft_printf("hallo ich bin lukas %c\n", 'a');
 	return (0);
 }
