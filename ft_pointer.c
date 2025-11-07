@@ -1,26 +1,13 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_pointer.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsalkic <lsalkic@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/06 12:10:50 by lsalkic           #+#    #+#             */
-/*   Updated: 2025/11/06 16:38:39 by lsalkic          ###   ########.fr       */
+/*   Created: 2025/11/06 14:29:42 by lsalkic           #+#    #+#             */
+/*   Updated: 2025/11/06 14:30:46 by lsalkic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int	ft_putchar(int c)
-{
-	unsigned char	a;
-
-	a = (unsigned char)c;
-	return (write(1, &a, 1));
-}
-
-// int	main(void)
-// {
-// 	ft_putchar(48);
-// }

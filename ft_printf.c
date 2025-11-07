@@ -6,7 +6,7 @@
 /*   By: lsalkic <lsalkic@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 12:17:21 by lsalkic           #+#    #+#             */
-/*   Updated: 2025/10/27 17:22:30 by lsalkic          ###   ########.fr       */
+/*   Updated: 2025/11/06 16:44:23 by lsalkic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ char	ft_c(const char *format, int i, va_list args)
 int	ft_printf(const char *format, ...)
 {
 	int		i;
+	int		count;
 	char	new;
 	va_list	args;
 
@@ -36,7 +37,7 @@ int	ft_printf(const char *format, ...)
 		{
 			i++;
 			if (format[i] == 'c')
-				ft_c(format, i, args);
+				count = ft_c(format, i, args);
 		}
 		else
 			write(1, &format[i], 1);
