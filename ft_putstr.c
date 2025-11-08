@@ -6,11 +6,11 @@
 /*   By: lsalkic <lsalkic@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 13:43:40 by lsalkic           #+#    #+#             */
-/*   Updated: 2025/11/08 14:44:44 by lsalkic          ###   ########.fr       */
+/*   Updated: 2025/11/08 16:01:53 by lsalkic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
 int	ft_putstr(char *c)
 {

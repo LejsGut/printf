@@ -6,7 +6,7 @@
 #    By: lsalkic <lsalkic@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/08 14:31:40 by lsalkic           #+#    #+#              #
-#    Updated: 2025/11/08 14:35:11 by lsalkic          ###   ########.fr        #
+#    Updated: 2025/11/08 15:18:49 by lsalkic          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,7 @@ $(NAME): $(OBJ)
 	$(AR) $(NAME) $(OBJ)
 
 %.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@ -lft -Llibft/
 
 clean:
 	$(RM) $(OBJ)

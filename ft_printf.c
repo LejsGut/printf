@@ -6,11 +6,11 @@
 /*   By: lsalkic <lsalkic@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 12:17:21 by lsalkic           #+#    #+#             */
-/*   Updated: 2025/11/08 14:44:07 by lsalkic          ###   ########.fr       */
+/*   Updated: 2025/11/08 16:01:04 by lsalkic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
 int	ft_after_percent(const char *format, va_list *args)
 {

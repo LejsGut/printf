@@ -6,11 +6,11 @@
 /*   By: lsalkic <lsalkic@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 12:24:37 by lsalkic           #+#    #+#             */
-/*   Updated: 2025/11/07 17:29:55 by lsalkic          ###   ########.fr       */
+/*   Updated: 2025/11/08 16:01:42 by lsalkic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
 int	ft_puthex_lower(unsigned int num, char *base)
 {

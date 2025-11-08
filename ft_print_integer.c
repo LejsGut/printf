@@ -6,17 +6,17 @@
 /*   By: lsalkic <lsalkic@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 15:46:20 by lsalkic           #+#    #+#             */
-/*   Updated: 2025/11/08 12:46:24 by lsalkic          ###   ########.fr       */
+/*   Updated: 2025/11/08 16:01:21 by lsalkic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
 int	ft_print_integer(long num)
 {
 	long	count;
 
-	count = 0; // vielleicht sonderfall aber eher nicht
+	count = 0;
 	if (num < 0)
 	{
 		num = num * -1;

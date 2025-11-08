@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_number_unsigned.c                         :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsalkic <lsalkic@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/06 14:48:11 by lsalkic           #+#    #+#             */
-/*   Updated: 2025/11/08 16:01:53 by lsalkic          ###   ########.fr       */
+/*   Created: 2025/11/08 15:23:28 by lsalkic           #+#    #+#             */
+/*   Updated: 2025/11/08 16:00:11 by lsalkic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
-int	ft_print_number_unsigned(unsigned int nbr)
-{
-	int	writtendigits;
+# include "libft/libft.h"
+# include <stdarg.h>
 
-	writtendigits = 0;
-	if (nbr > 9)
-		writtendigits += ft_print_number_unsigned(nbr / 10);
-	writtendigits += ft_putchar(nbr % 10 + 48);
-	return (writtendigits);
-}
+int	ft_puthex_lower(unsigned int num, char *base);
+int	ft_putstr(char *c);
+int	ft_pointer(char *base, void *ptr);
+int	ft_print_number_unsigned(unsigned int nbr);
+int	ft_puthex_upper(unsigned int num, char *base);
+int	ft_putchar(int c);
+int	ft_print_integer(long num);
+int	ft_printf(const char *format, ...);
 
-// int	main(void)
-// {
-// 	printf("\n%d\n", ft_print_number_unsigned(876876876867867));
-// }
+#endif

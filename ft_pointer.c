@@ -6,11 +6,11 @@
 /*   By: lsalkic <lsalkic@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 14:29:42 by lsalkic           #+#    #+#             */
-/*   Updated: 2025/11/08 11:14:24 by lsalkic          ###   ########.fr       */
+/*   Updated: 2025/11/08 16:01:25 by lsalkic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
 int	ft_pointer(char *base, void *ptr)
 {
