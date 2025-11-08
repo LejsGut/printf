@@ -6,7 +6,7 @@
 /*   By: lsalkic <lsalkic@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 12:17:21 by lsalkic           #+#    #+#             */
-/*   Updated: 2025/11/08 12:46:03 by lsalkic          ###   ########.fr       */
+/*   Updated: 2025/11/08 14:44:07 by lsalkic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	ft_after_percent(const char *format, va_list *args)
 				"0123456789abcdef"));
 	else if (*format == 'X')
 		return (ft_puthex_upper(va_arg(*args, unsigned int),
-				"0123456789abcdef"));
+				"0123456789ABCDEF"));
 	else if (*format == '%')
 		return (ft_putchar('%'));
 	return (0);
@@ -39,9 +39,9 @@ int	ft_printf(const char *format, ...)
 {
 	int		i;
 	int		count;
-	char	new;
 	va_list	args;
 
+	count = 0;
 	va_start(args, format);
 	i = 0;
 	while (format[i])
@@ -49,21 +49,21 @@ int	ft_printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
-			count += (ft_after_percent(format, &args));
+			count += (ft_after_percent(&format[i], &args));
 		}
 		else
-			write(1, &format[i], 1);
+			count += ft_putchar(format[i]);
 		i++;
 	}
 	va_end(args);
-	return (i);
+	return (count);
 }
 
-int	main(void)
-{
-	printf("Hallo Welt!\n");
-	ft_printf("Hallo Welt!\n");
-	printf("hallo ich bin lukas %c\n", 'a');
-	ft_printf("hallo ich bin lukas %c\n", 'a');
-	return (0);
-}
+// int	main(void)
+// {
+// 	printf("Hallo Welt!\n");
+// 	ft_printf("Hallo Welt!\n");
+// 	printf("hallo ich bin lukas %c\n", 'a');
+// 	ft_printf("hallo ich bin lukas %c\n", 'a');
+// 	return (0);
+// }

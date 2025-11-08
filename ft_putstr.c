@@ -6,7 +6,7 @@
 /*   By: lsalkic <lsalkic@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 13:43:40 by lsalkic           #+#    #+#             */
-/*   Updated: 2025/11/08 12:41:52 by lsalkic          ###   ########.fr       */
+/*   Updated: 2025/11/08 14:44:44 by lsalkic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_putstr(char *c)
 
 	i = 0;
 	if (!c)
-		return (0);
+		return (write(1, "null", 5));
 	while (c[i])
 	{
 		ft_putchar(c[i]);
