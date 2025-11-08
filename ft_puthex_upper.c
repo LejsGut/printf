@@ -6,7 +6,7 @@
 /*   By: lsalkic <lsalkic@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 13:20:41 by lsalkic           #+#    #+#             */
-/*   Updated: 2025/11/06 13:24:48 by lsalkic          ###   ########.fr       */
+/*   Updated: 2025/11/08 11:38:25 by lsalkic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static int	ft_puthex_upper(unsigned int num, char *base)
 	ft_putchar(base[num % 16]);
 	return (result + 1);
 }
-int	main(void)
-{
-	ft_puthex_upper(56789, "0123456789abcdef");
-}
+// int	main(void)
+// {
+// 	ft_puthex_upper(56789, "0123456789abcdef");
+// }

@@ -6,7 +6,7 @@
 /*   By: lsalkic <lsalkic@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 14:29:42 by lsalkic           #+#    #+#             */
-/*   Updated: 2025/11/07 17:38:20 by lsalkic          ###   ########.fr       */
+/*   Updated: 2025/11/08 11:14:24 by lsalkic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,15 +28,15 @@ int	ft_pointer(char *base, void *ptr)
 	return (result + 1);
 }
 
-int	main(void)
-{
-	int	x;
-	int	*p;
+// int	main(void)
+// {
+// 	int	x;
+// 	int	*p;
 
-	x = 42;
-	p = &x;
-	printf("Adresse von x: %p\n", (void *)p);
-	printf("ft_pointer Rückgabewert: %d\n", ft_pointer("0123456789abcdef", p));
-	ft_pointer("0123456789abcdef", p);
-	return (0);
-}
+// 	x = 42;
+// 	p = &x;
+// 	printf("Adresse von x: %p\n", (void *)p);
+// 	printf("ft_pointer Rückgabewert: %d\n", ft_pointer("0123456789abcdef", p));
+// 	ft_pointer("0123456789abcdef", p);
+// 	return (0);
+// }
