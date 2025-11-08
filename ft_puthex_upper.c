@@ -6,13 +6,13 @@
 /*   By: lsalkic <lsalkic@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 13:20:41 by lsalkic           #+#    #+#             */
-/*   Updated: 2025/11/08 11:38:25 by lsalkic          ###   ########.fr       */
+/*   Updated: 2025/11/08 12:36:36 by lsalkic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_puthex_upper(unsigned int num, char *base)
+int	ft_puthex_upper(unsigned int num, char *base)
 {
 	int	result;
 

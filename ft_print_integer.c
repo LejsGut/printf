@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_integer.c                                    :+:      :+:    :+:   */
+/*   ft_print_integer.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsalkic <lsalkic@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 15:46:20 by lsalkic           #+#    #+#             */
-/*   Updated: 2025/11/07 16:54:49 by lsalkic          ###   ########.fr       */
+/*   Updated: 2025/11/08 12:46:24 by lsalkic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	print_integer(long num)
+int	ft_print_integer(long num)
 {
 	long	count;
 
@@ -23,7 +23,7 @@ int	print_integer(long num)
 		count += write(1, "-", 1);
 	}
 	if (num > 9)
-		count += print_integer(num / 10);
+		count += ft_print_integer(num / 10);
 	count += ft_putchar(num % 10 + '0');
 	return (count);
 }

@@ -6,7 +6,7 @@
 /*   By: lsalkic <lsalkic@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 20:25:51 by lsalkic           #+#    #+#             */
-/*   Updated: 2025/11/08 11:41:10 by lsalkic          ###   ########.fr       */
+/*   Updated: 2025/11/08 12:49:28 by lsalkic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,13 +72,12 @@ void				ft_lstclear(t_list **lst, void (*del)(void *));
 void				ft_lstdelone(t_list *lst, void (*del)(void *));
 t_list				*ft_lstnew(void *content);
 void				fr_lstadd_back(t_list **lst, t_list *new);
-int					ft_putchar(int c);
 int					ft_puthex_lower(unsigned int num, char *base);
 int					ft_putstr(char *c);
 int					ft_pointer(char *base, void *ptr);
-int					ft_print_integer(long num);
 int					ft_print_number_unsigned(unsigned int nbr);
-static int			ft_puthex_upper(unsigned int num, char *base);
-char				ft_percent(void);
+int					ft_puthex_upper(unsigned int num, char *base);
+int					ft_putchar(int c);
+int					ft_print_integer(long num);
 
 #endif
