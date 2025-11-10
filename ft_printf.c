@@ -6,7 +6,7 @@
 /*   By: lsalkic <lsalkic@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 12:17:21 by lsalkic           #+#    #+#             */
-/*   Updated: 2025/11/08 16:01:04 by lsalkic          ###   ########.fr       */
+/*   Updated: 2025/11/10 12:26:01 by lsalkic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,10 @@ int	ft_after_percent(const char *format, va_list *args)
 	else if (*format == 's')
 		return (ft_putstr(va_arg(*args, char *)));
 	else if (*format == 'p')
-		return (ft_pointer("0123456789abcdef", va_arg(*args, void *)));
+		return (ft_pointer("0123456789abcdef", va_arg(*args,
+					unsigned long long)));
 	else if (*format == 'd' || *format == 'i')
-		return (ft_print_integer(va_arg(*args, long)));
+		return (ft_print_integer(va_arg(*args, int)));
 	else if (*format == 'u')
 		return (ft_print_number_unsigned(va_arg(*args, unsigned int)));
 	else if (*format == 'x')
@@ -61,9 +62,6 @@ int	ft_printf(const char *format, ...)
 
 // int	main(void)
 // {
-// 	printf("Hallo Welt!\n");
-// 	ft_printf("Hallo Welt!\n");
-// 	printf("hallo ich bin lukas %c\n", 'a');
-// 	ft_printf("hallo ich bin lukas %c\n", 'a');
+// 	ft_printf("ha);
 // 	return (0);
 // }

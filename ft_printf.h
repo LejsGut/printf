@@ -6,7 +6,7 @@
 /*   By: lsalkic <lsalkic@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/08 15:23:28 by lsalkic           #+#    #+#             */
-/*   Updated: 2025/11/08 16:00:11 by lsalkic          ###   ########.fr       */
+/*   Updated: 2025/11/08 16:57:38 by lsalkic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 int	ft_puthex_lower(unsigned int num, char *base);
 int	ft_putstr(char *c);
-int	ft_pointer(char *base, void *ptr);
+int	ft_pointer(char *base, unsigned long long ptr);
 int	ft_print_number_unsigned(unsigned int nbr);
 int	ft_puthex_upper(unsigned int num, char *base);
 int	ft_putchar(int c);
